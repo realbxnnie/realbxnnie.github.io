@@ -24,7 +24,7 @@
     animation-name: animIMG;
     animation-duration: 2s;
   }
-  .mainframe {
+  #mainframe {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
     box-shadow: 0 0 10px 10px rgba(133, 0, 234, 0.2);
@@ -39,6 +39,27 @@
     z-index: 2;
     width: 80%;
     padding: 20px;
+    text-align: center;
+    animation-name: anim;
+    animation-duration: 2s
+  }
+
+  #mainbutton  {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    box-shadow: 0 0 10px 10px rgba(133, 0, 234, 0.2);
+    color: white;
+    border-radius: 8px;
+    filter: blur(0px);
+    position: absolute;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    font-size: 20px;
     text-align: center;
     animation-name: anim;
     animation-duration: 2s
@@ -80,10 +101,13 @@
   console.log("https://enderman.ch")
   console.log("https://realbxnnie.github.io/malware/rainingtacos/")
 
-  
   function redirect(page) {
     window.location = "https://realbxnnie.github.io/" + page
-
+  }
+  function playAudio() {
+    audio = new Audio("https://ia800904.us.archive.org/15/items/tvtunes_29299/The%20Living%20Tombstone%20-%20Five%20Nights%20at%20Freddys.mp3")
+    audio.loop = true
+    audio.play()
   }
 </script>
 
@@ -105,7 +129,8 @@
       </div>
         <center>
           <img src="https://pa1.narvii.com/6773/527be81f04155bd1e02514cec7f361346ca65908_hq.gif"> 
-          <div class="mainframe">
+          <button id="mainbutton" onclick="document.getElementById('mainframe').style.visibility = 'visible'; document.getElementById('mainbutton').style.visibility = 'hidden'; playAudio()">fire is death</button>
+          <div id="mainframe">
            <div id="About">
             <h1>Bonnie <span style="font-weight: lighter; font-size: 12px; background-color: rgb(133, 0, 234); border-radius: 4px; padding-left: 5px; padding-right: 5px; box-shadow: 3px 3px 5px rgba(79, 0, 140, 0.5);">OFFICIAL</span></h1>
             <p>About</p>
@@ -118,6 +143,9 @@
            <hr>
            <p>I like <b>· Programming</b> <b>· Malware Development</b> <b>· Sim Racing</b> </p>
            </div>
+           <script>
+              document.getElementById("mainframe").style.visibility = 'hidden'
+           </script>
         </center> 
     </main>
   </body>
