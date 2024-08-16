@@ -1,8 +1,5 @@
 console.info("[B] [O] [N] [N] [I] [E]")
 console.log("Inspired by Enderman's Website")
-console.log("-----------------------")
-
-console.log("https://enderman.ch")
 
 var isAudioPlaying = false
 var currentPage = "About"
