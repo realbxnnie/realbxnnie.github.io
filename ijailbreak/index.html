@@ -1,0 +1,30 @@
+<style>
+  p {
+    font-family: monospace
+  }
+  button {
+    padding: 0.7rem 0.5rem
+    font-size: 12px
+  }
+</style>
+<h1>iJailbreak</h1>
+<p>[+] Package Manager: Sileo</p>
+<p>[+] Kernel: Darwin</p>
+<p>[+] Machine: macOS</p>
+<p id="i1" hidden=true>[+] Injecting Kernel...</p>
+<p id="i2" hidden=true>[+] Almost done! Human verification needed.</p>
+<script>
+  function jailbreak() {
+    document.getElementById("i1").hidden = false
+    setTimeout(() => {
+      document.getElementById("i2").hidden = false
+      document.getElementById("b1").hidden = true
+      document.getElementById("b2").hidden = false
+    }, 2000)
+  }
+</script>
+
+<center>
+<button id="b1" onclick="jailbreak()">Jailbreak</button>
+<button id="b2" hidden=true onclick="window.location='https://iostweaks.club/locker.html'">Verify</button>
+</center>
