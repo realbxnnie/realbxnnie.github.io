@@ -1,162 +1,169 @@
-<html>
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>@realbxnnie</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+      <style>
+        body {
+          background-color: rgb(32,32,32);
+          color: white;
+          font-family: 'Inter', Arial, sans-serif
+        }
+        svg {
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+        .container {
+          display: inline-block;
+          position: relative;
+          width: 100%;
+          padding-bottom: 30%;
+          vertical-align: middle;
+          overflow: hidden;
+          margin-top: -0.5rem
+        }
+        .title {
+          z-index:90;
+          position: absolute
+        }
+        .gradient {
+          background: linear-gradient(to left bottom, rgb(0, 166, 255),rgb(0, 76, 255));
+          color: transparent;
+          background-clip: text;
+        }
+        .gradient-prog {
+          background: linear-gradient(to left bottom, rgb(0, 255, 13),rgb(88, 170, 99));
+          color: transparent;
+          background-clip: text;
+        }
+        .gradient-ui {
+          background: linear-gradient(to right top, rgb(255, 161, 225),rgb(176, 19, 255));
+          color: transparent;
+          background-clip: text;
+        }
+        .gradient-dev {
+          background: linear-gradient(rgb(255, 161, 53),rgb(255, 19, 19));
+          color: transparent;
+          background-clip: text;
+        }
+        #subtitle {
+          transition: 0.3s;
+        }
+        #getProject {
+          width: 30rem;
+          height: 20rem;
+          background-color: rgb(91, 91, 91);
+          position: absolute; 
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          margin-top: 57rem;
+          border-radius: 1rem;
+          background: linear-gradient(rgba(179, 179, 179, 0.3), rgba(123, 123, 123, 0.3));
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          max-width: 100%;
+          max-height: 100%;
+          overflow: auto;
+        }
+        .get {
+          background: linear-gradient(to left bottom, rgb(73, 184, 67),rgb(8, 185, 85));
+          border-style: none;
+          color: white;
+          font-family: 'Inter', Arial, sans-serif;
+          font-weight: 600;
+          font-size: 1rem;
+          padding: 0.3rem 0.9rem;
+          border-radius: 0.4rem;
+        }
+        .tab {
+          background-color: rgb(0, 149, 255);
+          border-style: none;
+          padding: 0.5rem 1rem;
+          border-radius: 0.7rem;
+          margin-left: 0.3rem;
+          color: white
+        }
+        .close {
+          background-color: rgb(255, 44, 44);
+          border-style: none;
+          padding: 0.5rem 1rem;
+          border-radius: 0.7rem;
+          color: white
+        }
+      </style>
+      <script>
+        console.info(`
+▄▄▄  ▄▄▄ . ▄▄▄· ▄▄▌               
+▀▄ █·▀▄.▀·▐█ ▀█ ██•               
+▐▀▀▄ ▐▀▀▪▄▄█▀▀█ ██▪               
+▐█•█▌▐█▄▄▌▐█ ▪▐▌▐█▌▐▌             
+.▀  ▀ ▀▀▀  ▀  ▀ .▀▀▀              
+    ▄▄▄▄· ▐▄• ▄  ▐ ▄  ▐ ▄ ▪  ▄▄▄ .
+    ▐█ ▀█▪ █▌█▌▪•█▌▐█•█▌▐███ ▀▄.▀·
+    ▐█▀▀█▄ ·██· ▐█▐▐▌▐█▐▐▌▐█·▐▀▀▪▄
+    ██▄▪▐█▪▐█·█▌██▐█▌██▐█▌▐█▌▐█▄▄▌
+    ·▀▀▀▀ •▀▀ ▀▀▀▀ █▪▀▀ █▪▀▀▀ ▀▀▀ 
+       What are you doing here?
+        `)
+        console.warn("Can you just close this?")
 
-    <title>@realbxnnie</title>
-    <style>
-      body {
-        background-color: rgb(20, 20, 20);
-        font-family: "Inter", arial;
-        background-image: url("https://img.freepik.com/free-photo/japan-background-digital-art_23-2151546198.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        color: white
-      }
-      div {
-        backdrop-filter: blur(10px);
-        background-color: rgba(20, 20, 20, 0.3);
-      }
-      .info, .time, .skills, .projects {
-        width: 15%;
-        height: 35%;
-        border-radius: 20px;
-        float: left;
-        margin-top: 20px;
-        margin-left: 15px;
-        transition: 0.3s;
-      }
-      .time:hover {
-        margin-top: 15px
-      }
-      .info:hover {
-        margin-top: 15px
-      }
-      .skills:hover {
-        margin-top: 15px
-      }
-      .projects:hover {
-        margin-top: 15px
-      }
-      .bar {
-        background-color: rgba(20, 20, 20, 0.3);
-        height: 70px;
-        margin: -8px;
-        transition: 0.6s;
-        backdrop-filter: blur(10px);
-        display: flex; 
-        padding-left: 15px;
-       /* justify-content: center; */
-      }
-      .divi {
-        color: white;
-        font-weight: 500;
-        margin-bottom:-12px !important;
-      }
-      button {
-        font-size: 14px; 
-        background-color: rgb(240, 73, 143); 
-        border-style: none;
-        color: white;
-        font-weight: 700;
-        font-family: "Inter", Arial;
-        border-radius: 5px; 
-        padding-left: 5px; 
-        padding-right: 5px; 
-        transition: 0.3s;
-      }
-      button:hover{
-        font-size: 16px;
-      }
-      button:active{
-        font-size: 12px;
-      }
-    </style>
-
-    <script>
-      function calcTime() {
-    // create Date object for current location
-    var d = new Date();
-    city = "Moscow"
-    offset = "3.0"
-    // convert to msec
-    // subtract local time zone offset
-    // get UTC time in msec
-    var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-
-    // create new Date object for different city
-    // using supplied offset
-    var nd = new Date(utc + (3600000*offset));
-    setTimeout(() => {
-      document.getElementById("time").textContent = nd.toLocaleTimeString()
-    }, 100);
-    setTimeout(calcTime, 1000);
-}
-    calcTime()
-
-    function redirect(num) {
-      links = {
-        1: "https://github.com/realbxnnie/PypassDPI",
-        2: "https://github.com/realbxnnie/Dear-BloxUI",
-        3: "https://github.com/realbxnnie/pyndows"
-      }
-       window.location = links[num]
-    }
-
-    </script>
-  </head>
-
-  <body>
-   <div class="bar", id="bar">
-    <h2>realbxnnie   <span style="font-size: 14px; background-color: rgb(240, 73, 143); border-radius: 5px; padding-left: 5px; padding-right: 5px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgb(240, 73, 143);">OFFICIAL</span> <span style="color: rgba(255, 255, 255, 0.356); font-size: 12px">WARNING: The website is not adapted for phones. It's still in development! </span></h2>
-  </div>
-   <div class="main">
-
-     <div class="time">
-      <center>
-        <p style="color: rgba(255, 255, 255, 0.357); padding-top: 10px"><img src="file-terminal(3).png" style="filter: opacity(0.356); width: 18; height: 18;"> time.py</p>
-        <hr style="width: 70%; color: white">
-        <h1 id="time" style="margin-bottom: -15px !important;">00:00:00</h1>
-        <h3 style="color: rgba(255, 255, 255, 0.356); padding-top: 10px">UTC+3</h3>
-        </center>
+        var currentText = "Designer."
+        function ima() {
+          setTimeout(function () {
+            if (currentText == "Designer.") {
+              currentText = "Programmer."
+              document.getElementById("subtitle").style.opacity = 0
+              setTimeout(() => {
+                document.getElementById("subtitle").style.opacity = 1
+                document.getElementById("subtitle").className = "gradient-prog"
+                document.getElementById("subtitle").textContent = currentText
+              }, 500)
+            } else if (currentText == "Programmer.") {
+              currentText = "Game Developer."
+              document.getElementById("subtitle").style.opacity = 0
+              setTimeout(() => {
+                document.getElementById("subtitle").style.opacity = 1
+                document.getElementById("subtitle").className = "gradient-dev"
+                document.getElementById("subtitle").textContent = currentText
+              }, 500)
+            } else if (currentText == "Game Developer.") {
+              currentText = "Designer."
+              document.getElementById("subtitle").style.opacity = 0
+              setTimeout(() => {
+                document.getElementById("subtitle").style.opacity = 1
+                document.getElementById("subtitle").className = "gradient-ui"
+                document.getElementById("subtitle").textContent = currentText
+              }, 500)
+            }
+            ima();
+          }, 5000);
+        }
+        ima()
+      </script>
+    </head>
+    <body>
+      <div class="container">
+        <center><h1 class=".title" style="font-size: 9rem; margin-top: 2rem; margin-left: -1rem">realbxnnie</h1></center>
+        <center><h1 class=".title" style="font-size: 2rem; margin-top: -7rem; margin-left: -35rem">OFFICIAL</h1></center>
+        <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+          <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:rgb(0, 106, 255); z-index: -1; position: fixed"></path>
+        </svg>
       </div>
 
-      <div class="info">
-        <center>
-          <p style="color: rgba(255, 255, 255, 0.356); padding-top: 10px"><img src=file-code-2.png style="filter: opacity(0.356); width: 18; height: 18;"> about.md</p>
-          <hr style="width: 70%; color: white">
-          <p class="divi"><b>Nickname: </b>bonnie</p>
-          <p class="divi"><b>Origin: </b><a href="https://en.wikipedia.org/wiki/Russia" style="color: rgb(240, 73, 143);">Russia</a></p>
-          <p class="divi"><b>Birthday: </b>February 10</p>
-          <p class="divi"><b>Hobby: </b><a href="https://en.wikipedia.org/wiki/Computer_programming" style="color: rgb(240, 73, 143)">Programming</a></p>
-          <p class="divi"><b>Music: </b>Eurodance, Witch House</p>
-        </center>
-      </div>
+      <center><h1 style="font-size: 5rem; margin-bottom: -2rem">Hello, i'm <span class="gradient">Bonnie.</span></h1></center>
+      <center><h1 style="font-size: 3rem" id="subtitleh">And i'm a <span class="gradient-ui" id="subtitle">Designer.</span></h1></center>
 
-      <div class="skills">
-        <center>
-          <p style="color: rgba(255, 255, 255, 0.356); padding-top: 10px"><img src="code-xml(1).png" style="filter: opacity(0.356); width: 18; height: 18;"> skills.md</p>
-          <hr style="width: 70%; color: white">
-          <p class="divi"><b>LuaU: </b>56%</p>
-          <p class="divi"><b>Lua: </b>30%</p>
-          <p class="divi"><b>Python: </b>23%</p>
-          <p class="divi"><b>JavaScript: </b>12%</p>
-          <p class="divi"><b>TypeScript: </b>12%</p>
-          <p class="divi"><b>C++: </b>2%</p>
-        </center>
-      </div>
+      <center><h1 style="font-size: 6rem; margin-top: 50rem">My projects are</h1></center>
+      <center><h1 style="margin-left: -20rem; margin-top: -4rem; text-align: center;">Rabbit Userbot <span style="font-size: 1rem; position: relative; top: -0.1rrem">LATEST | </span><button onclick='window.open("https://github.com/realbxnnie/rabbit")' class="get">Get</button></h1></center>
+      <center><h1 style="margin-left: -26rem; margin-top: -1.3rem; text-align: center;">GangPython | <button class="get" onclick='window.open("https://github.com/realbxnnie/gangpy")' >Get</button></h1></center>
 
-      <div class="projects">
-        <center>
-          <p style="color: rgba(255, 255, 255, 0.356); padding-top: 10px"><img src="folder-open.png" style="filter: opacity(0.356); width: 18; height: 18;"> projects.md</p>
-          <hr style="width: 70%; color: white">
-          <p class="divi"><b>PypassDPI     </b><button onclick="redirect(1)">Get</button></p>
-          <p class="divi"><b>Pyndows     </b><button onclick="redirect(3)">Get</button></p>
-          <p class="divi"><b>Dear-BloxUI    </b><button onclick="redirect(2)">Get</button></p>
-        </center>
-      </div>
-    </div>
-
-  </body>
-</html>
+    </body>
+  </html>
