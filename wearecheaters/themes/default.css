@@ -1,0 +1,64 @@
+p {
+    margin-top: -1rem;
+    transition: 0.2s;
+}
+body {
+    background: linear-gradient(to bottom, rgb(23,23,23), rgb(34, 56, 113), rgb(56, 119, 255));
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: "Inter";
+    color: white;
+    transition: 0.2s;
+}
+.exploits-ExploitSection {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3rem);
+    width: 15em;
+    height: 17em;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: grid;
+    grid-row: auto;
+    padding-top: 1rem;
+    border-radius: 1.2rem;
+    transition: 0.2s;
+   
+}
+.exploit-icon {
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.exploits-Main {
+   display: flex;
+   transition: 0.2s;
+}
+.exploits-Download {
+    margin-top: -1rem;
+    border-style: none;
+    background-color: rgb(56, 119, 255);
+    color: white;
+    cursor: pointer;
+    font-family: "Inter";
+    border-radius: 0.3rem;
+    transition: 0.2s;
+    width: 5rem;
+    height: 1.2rem;
+}
+
+.exploits-Download:active {
+    border-style: none;
+    background-color: rgb(33, 72, 156);
+    color: white;
+    font-family: "Inter";
+    border-radius: 0.8rem;
+    transition: 0.2s;
+}
+
+.os-icon {
+    display: block;
+    transition: 0.2s;
+}
+
