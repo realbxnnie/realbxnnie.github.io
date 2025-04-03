@@ -1,0 +1,535 @@
+
+
+  <!DOCTYPE html>
+  
+    <html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <title sg-default="SOGo Groupware">SOGo Groupware</title>
+        <meta name="hideFrame" content="0" />
+        <meta name="description" content="SOGo Web Interface" />
+        <meta name="author" content="Inverse inc." />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="build" content="@3228d90dd886 202502160144" />
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+        <link rev="made" href="mailto:support@sogo.nu" />
+        <link href="/SOGo.woa/WebServerResources/img/sogo.ico?lm=1742559566" rel="shortcut icon" type="image/x-icon" />
+        
+          <link href="/SOGo.woa/WebServerResources/css/theme-default.css?lm=1740494937" rel="stylesheet" type="text/css" />
+        
+        <link href="/SOGo.woa/WebServerResources/css/styles.css?lm=1740494937" rel="stylesheet" type="text/css" />
+        
+        
+        <!--[if IE]>
+          <link href="/SOGo.woa/WebServerResources/css/no-animation.css?lm=1740494937" rel="stylesheet" type="text/css" />
+        <![endif]-->
+      </head>
+
+      <body class="main" ng-app="SOGo.MainUI">
+
+        <noscript>
+          <div layout-fill="layout-fill" layout-align="center center" layout="column">
+            <div class="md-padding">
+              SOGo &#1090;&#1088;&#1077;&#1073;&#1091;&#1077;&#1090; &#1088;&#1072;&#1073;&#1086;&#1090;&#1099; Javascript. &#1055;&#1086;&#1078;&#1072;&#1083;&#1091;&#1081;&#1089;&#1090;&#1072;, &#1074;&#1082;&#1083;&#1102;&#1095;&#1080;&#1090;&#1077; &#1077;&#1075;&#1086; &#1074; &#1086;&#1087;&#1094;&#1080;&#1103;&#1093; &#1073;&#1088;&#1072;&#1091;&#1079;&#1077;&#1088;&#1072;.
+            </div>
+            <div>
+              <a href="../../../SOGo" class="md-button">
+                &#1055;&#1086;&#1074;&#1090;&#1086;&#1088;&#1080;&#1090;&#1100; &#1087;&#1086;&#1087;&#1099;&#1090;&#1082;&#1091;
+              </a>
+            </div>
+          </div>
+        </noscript>
+
+        
+          
+
+          
+          
+  <script type="text/javascript">
+    var cookieUsername = "";
+    var language = 'Russian';
+  </script>
+
+  
+  <main layout-fill="layout-fill" ng-controller="LoginController as app" layout-gt-md="row" class="view md-default-theme md-background md-hue-1 md-bg" ui-view="login" layout-align-gt-md="center start">
+    <md-content class="ng-cloak" flex="100" ng-show="app.showLogin" layout-align="start stretch" layout="column">
+      
+      <div class="md-whiteframe-3dp" id="loginContent" flex="100" layout="column" layout-gt-md="row">
+          <div flex-gt-md="50" class="sg-logo">
+            <div layout="row" class="md-padding">
+              <div class="md-flex hide show-gt-md"></div>
+              <img src="/SOGo.woa/WebServerResources/img/sogo-full.svg?lm=1742580547" class="md-margin" alt="*" />
+            </div>
+            
+          </div>
+          <div flex-gt-md="50" class="sg-login md-default-theme md-bg md-accent">
+            <div id="login" class="sg-login-content md-padding">
+              <form method="post" ng-cloak="ng-cloak" ng-submit="app.login()" layout="column" name="loginForm">
+                
+                <div ng-if="!app.loginState">
+                  <md-input-container class="md-block">
+                    <label>&#1051;&#1086;&#1075;&#1080;&#1085;</label>
+                    <md-icon>person</md-icon>
+                    <input type="text" name="3.1.1.3.3.1.4.4.1.3.3.1.1.3.1.5" value="" autocorrect="off" ng-model="app.creds.username" ng-required="true" autocapitalize="off" ng-change="app.usernameChanged()" ng-blur="app.retrievePasswordRecoveryEnabled()" />
+                  </md-input-container>
+                  <md-input-container class="md-block">
+                    <label>&#1055;&#1072;&#1088;&#1086;&#1083;&#1100;</label>
+                    <md-icon>vpn_key</md-icon>
+                    <input type="password" name="3.1.1.3.3.1.4.4.1.3.3.1.1.3.3.5" value="" id="passwordField" ng-model="app.creds.password" ng-required="true" />
+                    <md-icon id="password-visibility-icon" ng-click="app.changePasswordVisibility()">visibility</md-icon>
+                  </md-input-container>
+                  
+
+                  
+                  <div layout="row" layout-align="start end">
+                    <md-icon>language</md-icon>
+                    <md-input-container class="md-flex">
+                      <label>&#1042;&#1099;&#1073;&#1088;&#1072;&#1090;&#1100;...</label>
+                      <md-select ng-model="app.creds.language" placeholder="&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;" ng-change="app.changeLanguage($event)">
+                        
+                          <md-option value="Indonesian">
+                            bahasa Indonesia
+                          </md-option>
+                        
+                          <md-option value="Bosnian">
+                            Bosanski
+                          </md-option>
+                        
+                          <md-option value="Catalan">
+                            Catal&#224;
+                          </md-option>
+                        
+                          <md-option value="Montenegrin">
+                            Crnogorski
+                          </md-option>
+                        
+                          <md-option value="Welsh">
+                            Cymraeg
+                          </md-option>
+                        
+                          <md-option value="Czech">
+                            &#268;esky
+                          </md-option>
+                        
+                          <md-option value="Danish">
+                            Dansk (Danmark)
+                          </md-option>
+                        
+                          <md-option value="German">
+                            Deutsch
+                          </md-option>
+                        
+                          <md-option value="English">
+                            English
+                          </md-option>
+                        
+                          <md-option value="SpanishArgentina">
+                            Espa&#241;ol (Argentina)
+                          </md-option>
+                        
+                          <md-option value="SpanishSpain">
+                            Espa&#241;ol (Espa&#241;a)
+                          </md-option>
+                        
+                          <md-option value="Basque">
+                            Euskara
+                          </md-option>
+                        
+                          <md-option value="French">
+                            Fran&#231;ais
+                          </md-option>
+                        
+                          <md-option value="Galician">
+                            Galego
+                          </md-option>
+                        
+                          <md-option value="Croatian">
+                            Hrvatski
+                          </md-option>
+                        
+                          <md-option value="Italian">
+                            Italiano
+                          </md-option>
+                        
+                          <md-option value="Icelandic">
+                            &#205;slenska
+                          </md-option>
+                        
+                          <md-option value="Latvian">
+                            Latvie&#353;u
+                          </md-option>
+                        
+                          <md-option value="Lithuanian">
+                            Lietuvi&#371;
+                          </md-option>
+                        
+                          <md-option value="Hungarian">
+                            Magyar
+                          </md-option>
+                        
+                          <md-option value="Dutch">
+                            Nederlands
+                          </md-option>
+                        
+                          <md-option value="NorwegianBokmal">
+                            Norsk bokm&#229;l
+                          </md-option>
+                        
+                          <md-option value="NorwegianNynorsk">
+                            Norsk nynorsk
+                          </md-option>
+                        
+                          <md-option value="Polish">
+                            Polski
+                          </md-option>
+                        
+                          <md-option value="Portuguese">
+                            Portugu&#234;s
+                          </md-option>
+                        
+                          <md-option value="BrazilianPortuguese">
+                            Portugu&#234;s brasileiro
+                          </md-option>
+                        
+                          <md-option value="Romanian">
+                            Rom&#226;n&#259;
+                          </md-option>
+                        
+                          <md-option value="Slovak">
+                            Slovensky
+                          </md-option>
+                        
+                          <md-option value="Slovenian">
+                            Sloven&#353;&#269;ina
+                          </md-option>
+                        
+                          <md-option value="SerbianLatin">
+                            Srpski
+                          </md-option>
+                        
+                          <md-option value="Finnish">
+                            Suomi
+                          </md-option>
+                        
+                          <md-option value="Swedish">
+                            Svenska
+                          </md-option>
+                        
+                          <md-option value="TurkishTurkey">
+                            T&#252;rk&#231;e (T&#252;rkiye)
+                          </md-option>
+                        
+                          <md-option value="Bulgarian">
+                            &#1041;&#1098;&#1083;&#1075;&#1072;&#1088;&#1089;&#1082;&#1080;
+                          </md-option>
+                        
+                          <md-option value="Macedonian">
+                            &#1052;&#1072;&#1082;&#1077;&#1076;&#1086;&#1085;&#1089;&#1082;&#1080;
+                          </md-option>
+                        
+                          <md-option value="Russian">
+                            &#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;
+                          </md-option>
+                        
+                          <md-option value="Serbian">
+                            &#1057;&#1088;&#1087;&#1089;&#1082;&#1080;
+                          </md-option>
+                        
+                          <md-option value="Ukrainian">
+                            &#1059;&#1082;&#1088;&#1072;&#1111;&#1085;&#1089;&#1100;&#1082;&#1072;
+                          </md-option>
+                        
+                          <md-option value="Kazakh">
+                            &#1178;&#1072;&#1079;&#1072;&#1179;
+                          </md-option>
+                        
+                          <md-option value="Hebrew">
+                            &#1506;&#1489;&#1512;&#1497;&#1514;
+                          </md-option>
+                        
+                          <md-option value="Arabic">
+                            &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;
+                          </md-option>
+                        
+                          <md-option value="Japanese">
+                            &#26085;&#26412;&#35486;
+                          </md-option>
+                        
+                          <md-option value="ChineseTaiwan">
+                            &#27491;&#39636;&#20013;&#25991;
+                          </md-option>
+                        
+                          <md-option value="ChineseChina">
+                            &#31616;&#20307;&#20013;&#25991;
+                          </md-option>
+                        
+                      </md-select>
+                    </md-input-container>
+                  </div>
+
+                  
+                  
+                  
+                  <div layout="row" layout-align="center center">
+                    <md-switch class="md-accent md-hue-2" ng-model="app.creds.rememberLogin" arial-label="&#1047;&#1072;&#1087;&#1086;&#1084;&#1085;&#1080;&#1090;&#1100; &#1080;&#1084;&#1103; &#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1103;">
+                      &#1047;&#1072;&#1087;&#1086;&#1084;&#1085;&#1080;&#1090;&#1100; &#1080;&#1084;&#1103; &#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1103;
+                    </md-switch>
+                  </div>
+                  
+                </div>
+
+                
+                <div ng-if="app.passwordRecovery.passwordRecoveryEnabled" layout-align="center center" layout="row">
+                  <div ng-if="app.showLogin">
+                    <a href="#" class="password-lost-link" sg-ripple-click="loginContent" ng-click="app.passwordRecoveryInfo()">&#1055;&#1072;&#1088;&#1086;&#1083;&#1100; &#1091;&#1090;&#1077;&#1088;&#1103;&#1085;</a>
+                  </div>
+                </div>
+
+                
+                <div ng-if="!app.loginState" layout-align="space-between center" layout="row">
+                  <md-button aria-label="&#1054; &#1089;&#1080;&#1089;&#1090;&#1077;&#1084;&#1077;" class="md-icon-button" ng-click="app.showAbout()">
+                    <md-icon>info</md-icon>
+                  </md-button>
+                  <div>
+                    <md-button aria-label="&#1057;&#1086;&#1077;&#1076;&#1080;&#1085;&#1077;&#1085;&#1080;&#1077;" ng-if="!app.loginState" class="md-fab md-accent md-hue-2" sg-ripple-click="loginContent" ng-disabled="loginForm.$invalid" type="submit">
+                      <md-icon>arrow_forward</md-icon>
+                    </md-button>
+                  </div>
+                </div>
+
+              <sg-ripple ng-class="{ 'md-warn': app.loginState == 'error' }" class="md-default-theme md-accent md-bg"></sg-ripple>
+              <sg-ripple-content class="md-flex ng-hide" ng-switch="app.loginState" layout-fill="layout-fill" layout-align="center center" layout="column">
+
+                
+                <div layout-align="center center" layout="column" ng-switch-when="authenticating">
+                  <md-progress-circular md-diameter="32" class="md-hue-1" md-mode="indeterminate"></md-progress-circular>
+                  <div class="md-default-theme md-accent md-hue-1 md-fg md-padding">
+                    &#1055;&#1088;&#1086;&#1074;&#1077;&#1088;&#1082;&#1072; &#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1072;
+                  </div>
+                </div>
+
+                
+                
+                <div layout-fill="layout-fill" layout-align="center center" layout="row" ng-switch-when="totpcode">
+                  <div flex="80" flex-sm="50" flex-gt-sm="40">
+                    <md-input-container class="md-block">
+                      <label>&#1050;&#1086;&#1076; &#1074;&#1077;&#1088;&#1080;&#1092;&#1080;&#1082;&#1072;&#1094;&#1080;&#1080;</label>
+                      <md-icon>lock</md-icon>
+                      <input type="text" name="3.1.1.3.3.1.4.4.1.3.3.1.1.13.4.1.2.1.1.5" value="" ng-model="app.creds.verificationCode" ng-required="app.loginState == 'totpcode'" ng-pattern="app.verificationCodePattern" sg-focus-on="totpcode" />
+                      <div class="sg-hint">&#1042;&#1074;&#1077;&#1076;&#1080;&#1090;&#1077; 6-&#1079;&#1085;&#1072;&#1095;&#1085;&#1099;&#1081; &#1082;&#1086;&#1076; &#1087;&#1086;&#1076;&#1090;&#1074;&#1077;&#1088;&#1078;&#1076;&#1077;&#1085;&#1080;&#1103; &#1080;&#1079; &#1087;&#1088;&#1080;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1103; &#1076;&#1074;&#1091;&#1093;&#1092;&#1072;&#1082;&#1090;&#1086;&#1088;&#1085;&#1086;&#1081; &#1072;&#1091;&#1090;&#1077;&#1085;&#1090;&#1080;&#1092;&#1080;&#1082;&#1072;&#1094;&#1080;&#1080;.</div>
+                    </md-input-container>
+                    <div layout="row" layout-align="space-between center">
+                      <md-button sg-ripple-click="loginContent" aria-label="&#1054;&#1090;&#1084;&#1077;&#1085;&#1080;&#1090;&#1100;" class="md-icon-button" ng-click="app.restoreLogin()">
+                        <md-icon>arrow_backward</md-icon>
+                      </md-button>
+                      <md-button aria-label="&#1057;&#1086;&#1077;&#1076;&#1080;&#1085;&#1077;&#1085;&#1080;&#1077;" ng-if="app.loginState == 'totpcode'" class="md-fab md-accent md-hue-2" ng-disabled="loginForm.$invalid" type="submit" ng-click="app.login()">
+                        <md-icon>arrow_forward</md-icon>
+                      </md-button>
+                    </div>
+                  </div>
+                </div>
+                
+                <div layout-fill="layout-fill" layout-align="center center" layout="row" ng-switch-when="totpdisabled">
+                  <div flex-xs="flex-xs" flex-gt-xs="50" layout-align="center center" layout="column">
+                    <md-icon class="md-accent md-hue-1 sg-icon--large">warning</md-icon>
+                    <div ng-if="app.cn" class="md-default-theme md-accent md-hue-1 md-fg md-padding">
+                      &#1044;&#1086;&#1073;&#1088;&#1086; &#1087;&#1086;&#1078;&#1072;&#1083;&#1086;&#1074;&#1072;&#1090;&#1100; {{app.cn}}
+                    </div>
+                    <div class="md-padding" layout-align="start center" layout="row">
+                      <md-icon>priority_high</md-icon>
+                      <div class="md-padding">
+                        &#1044;&#1074;&#1091;&#1093;&#1092;&#1072;&#1082;&#1090;&#1086;&#1088;&#1085;&#1072;&#1103; &#1072;&#1091;&#1090;&#1077;&#1085;&#1090;&#1080;&#1092;&#1080;&#1082;&#1072;&#1094;&#1080;&#1103; &#1086;&#1090;&#1082;&#1083;&#1102;&#1095;&#1077;&#1085;&#1072;. &#1042;&#1082;&#1083;&#1102;&#1095;&#1080;&#1090;&#1077; &#1076;&#1074;&#1091;&#1093;&#1092;&#1072;&#1082;&#1090;&#1086;&#1088;&#1085;&#1091;&#1102; &#1072;&#1091;&#1090;&#1077;&#1085;&#1090;&#1080;&#1092;&#1080;&#1082;&#1072;&#1094;&#1080;&#1102; &#1074; &#1087;&#1072;&#1088;&#1072;&#1084;&#1077;&#1090;&#1088;&#1072;&#1093; &#1080; &#1087;&#1077;&#1088;&#1077;&#1085;&#1072;&#1089;&#1090;&#1088;&#1086;&#1081;&#1090;&#1077; &#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1091; TOTP.
+                      </div>
+                    </div>
+                    <div layout="row" layout-align="end center">
+                      <md-button sg-ripple-click="loginContent" ng-click="app.continueLogin()">Continue</md-button>
+                    </div>
+                  </div>
+                </div>
+                
+
+                
+                <div layout-align="center center" layout="column" ng-switch-when="passwordchange">
+                  <md-icon ng-if="!(app.isInPasswordRecoveryMode() || app.isPasswordExpiredSecurity())" class="md-accent md-hue-1 sg-icon--large">watch_later</md-icon>
+                  <md-icon ng-if="app.isInPasswordRecoveryMode() || app.isPasswordExpiredSecurity()" class="md-accent md-hue-1 sg-icon--large">vpn_key</md-icon>
+                  <div ng-if="!app.isInPasswordRecoveryMode()" class="md-default-theme md-accent md-hue-1 md-fg md-padding">
+                    <span ng-if="!app.isPasswordExpiredSecurity()">&#1042;&#1072;&#1096; &#1087;&#1072;&#1088;&#1086;&#1083;&#1100; &#1080;&#1089;&#1090;&#1077;&#1082;, &#1074;&#1074;&#1077;&#1076;&#1080;&#1090;&#1077; &#1085;&#1086;&#1074;&#1099;&#1081; &#1085;&#1080;&#1078;&#1077;</span>
+                    <span ng-if="app.isPasswordExpiredSecurity()">Your password is too weak. Please choose a stronger password to enhance your security</span>
+                  </div>
+                  <div ng-if="app.isInPasswordRecoveryMode()" class="md-default-theme md-accent md-hue-1 md-fg md-padding">
+                    &#1055;&#1086;&#1078;&#1072;&#1083;&#1091;&#1081;&#1089;&#1090;&#1072;, &#1074;&#1074;&#1077;&#1076;&#1080;&#1090;&#1077; &#1085;&#1086;&#1074;&#1099;&#1081; &#1087;&#1072;&#1088;&#1086;&#1083;&#1100; &#1085;&#1080;&#1078;&#1077;
+                  </div>
+                  <div flex="100">
+                    <div layout-xs="column" layout="row">
+                    <md-input-container ng-if="!(app.isInPasswordRecoveryMode())" class="md-block" flex="flex">
+                        <label>Current password
+                        </label>
+                        <input type="password" name="3.1.1.3.3.1.4.4.1.3.3.1.1.13.7.9.1.1.3" value="" ng-model="app.passwords.oldPassword" sg-no-dirty-check="true" />
+                      </md-input-container>
+                      <md-input-container flex="flex" class="md-block">
+                        <label>&#1053;&#1086;&#1074;&#1099;&#1081; &#1087;&#1072;&#1088;&#1086;&#1083;&#1100;
+                        </label>
+                        <input type="password" name="3.1.1.3.3.1.4.4.1.3.3.1.1.13.7.9.1.3.3" value="" ng-model="app.passwords.newPassword" sg-no-dirty-check="true" />
+                        <div class="sg-hint">
+                          <ul class="sg-padded">
+                            <li ng-repeat="item in app.passwordPolicy">
+                              {{ item.label }}
+                            </li>
+                          </ul>
+                        </div>
+                      </md-input-container>
+                      <md-input-container flex="flex" class="md-block">
+                        <label>&#1055;&#1086;&#1076;&#1090;&#1074;&#1077;&#1088;&#1078;&#1076;&#1077;&#1085;&#1080;&#1077;
+                        </label>
+                        <input type="password" name="newPasswordConfirmation" value="" ng-model="app.passwords.newPasswordConfirmation" sg-no-dirty-check="true" />
+                        <div ng-messages="loginForm.newPasswordConfirmation.$error">
+                          <div ng-message="newPasswordMismatch">Passwords don't match</div>
+                        </div>
+                      </md-input-container>
+                    </div>
+                    <div layout="row" layout-align="end center">
+                      <md-button ng-disabled="!app.canChangePassword(loginForm)" ng-click="app.changePassword()" type="button">
+                        Change
+                      </md-button>
+                    </div>
+                  </div>
+                </div>
+
+                
+                <div layout-fill="layout-fill" layout-align="center center" layout="row" ng-switch-when="passwordwillexpire">
+                  <div flex-xs="flex-xs" flex-gt-xs="50" layout-align="center center" layout="column">
+                    <md-icon class="md-accent md-hue-1 sg-icon--large">warning</md-icon>
+                    <div ng-if="app.cn" class="md-default-theme md-accent md-hue-1 md-fg md-padding">
+                      &#1044;&#1086;&#1073;&#1088;&#1086; &#1087;&#1086;&#1078;&#1072;&#1083;&#1086;&#1074;&#1072;&#1090;&#1100; {{app.cn}}
+                    </div>
+                    <div class="md-padding" layout-align="start center" layout="row">
+                      <md-icon>priority_high</md-icon>
+                      <div class="md-padding">{{app.errorMessage}}</div>
+                    </div>
+                    <div layout="row" layout-align="end center">
+                      <md-button ng-click="app.loginState = 'passwordexpired'">&#1057;&#1084;&#1077;&#1085;&#1080;&#1090;&#1077; &#1042;&#1072;&#1096; &#1087;&#1072;&#1088;&#1086;&#1083;&#1100;</md-button>
+                      <md-button sg-ripple-click="loginContent" ng-click="app.continueLogin()">Continue</md-button>
+                    </div>
+                  </div>
+                </div>
+
+                
+                
+
+                
+                <div layout-align="center center" layout="column" ng-switch-when="logged">
+                  <md-icon class="md-accent md-hue-1 sg-icon--large">done</md-icon>
+                  <div class="md-default-theme md-accent md-hue-1 md-fg md-padding">
+                    &#1044;&#1086;&#1073;&#1088;&#1086; &#1087;&#1086;&#1078;&#1072;&#1083;&#1086;&#1074;&#1072;&#1090;&#1100; {{app.cn}}
+                  </div>
+                </div>
+
+                <div layout-align="center center" layout="column" ng-switch-when="message">
+                  <md-icon class="md-accent md-hue-1 sg-icon--large">done</md-icon>
+                  <div class="md-default-theme md-accent md-hue-1 md-fg md-padding">
+                    {{app.errorMessage}}
+                  </div>
+                  <md-button sg-ripple-click="loginContent" ng-click="app.continueLogin()">Continue</md-button>
+                </div>
+
+                
+                <div layout-align="center center" layout="column" ng-switch-when="error">
+                  <md-icon class="md-accent md-hue-1 sg-icon--large">error</md-icon>
+                  <div class="md-default-theme md-accent md-hue-1 md-fg md-padding">
+                    {{app.errorMessage}}
+                  </div>
+                  <md-button sg-ripple-click="loginContent" ng-click="app.restoreLogin()">&#1055;&#1086;&#1074;&#1090;&#1086;&#1088;&#1080;&#1090;&#1100;</md-button>
+                </div>
+
+              </sg-ripple-content>
+            </form>
+
+            </div>
+          </div>
+        </div>
+    </md-content>
+    
+  </main>
+
+  <script id="aboutBox.html" type="text/ng-template">
+    <md-dialog flex="50" flex-xs="100">
+      <md-dialog-content class="md-dialog-content">
+        <p><a href="http://sogo.nu/" target="_new">sogo.nu</a></p>
+        <p>Version 5.11.2 (@3228d90dd886 202502160144)</p>
+        <br />
+        <p>Разработанный компаниями Inverse и Alinto, SOGo представляет собой полнофункциональный сервер группового ПО, ориентированный на масштабируемость и простоту.<br/><br/>
+SOGo предоставляет мощный Web-интерфейс на базе AJAX и поддерживает множество собственных клиентов за счет использования стандартных протоколов, таких как CalDAV и CardDAV.<br/><br/>
+SOGo распространяется по лицензии <a href="http://gnu.org/licenses/gpl.html">GNU GPL</a> версии 2 или более поздней, а отдельные части - по лицензии GNU LGPL версии 2. Это свободное программное обеспечение: вы можете свободно изменять и распространять его. ГАРАНТИИ НЕ ПРЕДОСТАВЛЯЮТСЯ, в пределах, разрешенных законодательством.<br/><br/>
+Различные варианты поддержки см. на <a href="http://www.sogo.nu/en/support/community.html">этой странице</a>.</p>
+        
+      </md-dialog-content>
+      <md-dialog-actions>
+        <md-button ng-click="about.closeDialog()">&#1047;&#1072;&#1082;&#1088;&#1099;&#1090;&#1100;</md-button>
+      </md-dialog-actions>
+    </md-dialog>
+  </script>
+
+
+          
+          <script type="text/javascript">
+            var ApplicationBaseURL = '/SOGo/so/';
+            var ResourcesURL = '/SOGo.woa/WebServerResources';
+            var minimumSearchLength = 2;
+            var minimumSearchLengthLabel = '&#1042;&#1074;&#1077;&#1076;&#1080;&#1090;&#1077; &#1085;&#1077; &#1084;&#1077;&#1085;&#1077;&#1077; 2 &#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1086;&#1074;';
+            
+            
+              var DebugEnabled = false;
+            
+            
+            
+              var IsSuperUser = false;
+            
+            
+            
+              var usesCASAuthentication = false;
+            
+            
+            
+              var usesSAML2Authentication = false;
+            
+            
+
+            // This is the equivalent of an AJAX call to /SOGo/so/_UserLogin_/date
+            var currentDay = {"year":"2025","weekday":"Thursday","secondsBeforeTomorrow":75427,"abbr":{"month":"Apr","weekday":"Thu"},"day":"03","month":"April"};
+
+            var clabels = {"Address Book":"Адресная книга","Issuer":"Издатель","delegate is organizer":"Это организатор. Выберите другого приглашаемого.","Success":"Успех","You cannot (un)subscribe to a folder that you own!":"Вы не можете подписаться или отписаться от собственной папки.","Potentially anyone on the Internet will be able to access your calendar \"%{0}\", even if they do not have an account on this system. Is this information suitable for the public Internet?":"Вероятнее всего, любые пользователи Интернета сможет получить доступ к вашему календарю \"%{0}\", даже если они не зарегистрированы в этой системе. Действительно ли эта информация может быть доступна для всего Интернета?","July":"Июль","Loading":"Загружается","You cannot create a list in a shared address book.":"Вы не можете создать список в разделяемой адресной книге.","passwordRecovery_SecretQuestion3":"Какой ваш любимый фильм?","Vacation message is enabled":"Сообщение об отпуске включено","emailAddress":"Адрес электронной почты","Snooze":"Отложить","a2_Monday":"Пн","passwordRecovery_SecondaryEmail":"Дополнительный адрес электронной почты","key_delete":"удалить","Unable to unsubscribe from that folder!":"Невозможно прекратить подписку на эту папку!","10 minutes":"10 минут","key_left":"←","Any Authenticated User":"Любой аутентифицированный пользователь","View next item":"Просмотреть следующий элемент","February":"Февраль","45 minutes":"45 минут","S/MIME Certificate":"Сертификат S/MIME","Unable to subscribe to that folder!":"Невозможно подписаться на эту папку!","Move forward":"Передвинуть вперед","key_shift+space":"Shift + Пробел","A folder by that name already exists.":"Папка с этим именем уже существует.","noJavascriptError":"SOGo требует работы Javascript. Пожалуйста, включите его в опциях браузера.","Snooze for ":"Отложить на","September":"Сентябрь","You are not allowed to access this module or this system. Please contact your system administrator.":"Вам не предоставлено право доступа к этому модулю/системе. Пожалуйста, свяжитесь с администратором.","Sep":"Сен","December":"Декабрь","5 minutes":"5 минут","Home":"Начало","You have already subscribed to that folder!":"Вы уже подписались на эту папку!","noEmailForDelegation":"Вы должны указать адрес e-mail, на который вы хотите делегировать приглашение.","Apr":"Апр","June":"Июнь","Expand":"Развернуть","30 minutes":"30 минут","1 day":"1 день","Calendar":"Календарь","key_right":"→","a2_Sunday":"Вс","Work":"Работа","givenName":"Имя","Help":"Помощь","Mail":"Почта","AM":"AM","Public Access":"Публичный доступ","Give Access":"Предоставить доступ","Can't contact server":"Произошла ошибка при обращении к серверу. Пожалуйста, повторите попытку позже.","key_down":"↓","File size upload limit reached":"Достигнуто ограничение на размер загружаемого файла","May":"Май","Refresh":"Обновить","Toggle item":"Сменить выделение","Dec":"Дек","streetAddress":"Улица","Toggle visibility":"Переключить видимость","Confirmation":"Подтверждение","organizationalUnitName":"Организационное подразделение","User":"Пользователь","Personal":"Личное","You don't have the required privileges to perform the operation.":"У Вас нет права производить эту операцию.","Oct":"Окт","Right Administration":"Управление доступом","Any user with an account on this system will be able to access your mailbox \"%{0}\". Are you certain you trust them all?":"Любой пользователь данной системы получит доступ к вашему почтовому ящику \"%{0}\". Вы уверены что доверяете им всем?","Any user with an account on this system will be able to access your address book \"%{0}\". Are you certain you trust them all?":"Любой пользователь эданной той системы может читать вашу адресную книгу \"%{0}\". Вы уверены что доверяете им всем?","organizationName":"Организация","Jul":"Июл","Save":"Сохранить","a2_Wednesday":"Ср","Yes":"Да","Toggle Menu":"Переключить меню","Wrong username or password.":"Неправильный логин или пароль.","Password":"Пароль","Administration":"Администрирование","The user rights cannot be edited for this object!":"Извините, для данного объекта невозможно настроить права доступа!","Add...":"Добавить...","Add previous item to selection":"Добавить предыдущий элемент к выделению","Later":"Позже","Return Receipt Sent":"Уведомление о вручении отправлено","Start":"Начало","Move backward":"Передвинуть назад","Reduce":"Уменьшить","Error":"Ошибка","passwordRecovery_Disabled":"Отключено","Preferences":"Настройки","View previous item":"Просмотреть предыдущий элемент","Anybody accessing this resource from the public area":"Любой, использующий этот ресурс из публичного места","OK":"OK","a2_Friday":"Пт","delegate is a participant":"Приглашаемый уже участник.","Feb":"Фев","Owner":"Владелец","a2_Saturday":"Сб","passwordRecovery_SecretQuestion1":"Как звали ваше первое домашнее животное?","key_shift+down":"shift + ↓","1 hour":"1 час","Remove":"Удалить","Subscribe User":"Подписать пользователя","Subject Name":"Субъект","Nov":"Ноя","key_up":"↑","Any user not listed above":"Любой пользователь не указанный выше","passwordRecovery_SecretQuestion":"Секретный вопрос","commonName":"Понятное имя","a2_Thursday":"Чт","Keyboard Shortcuts":"Горячие клавиши","Reminder":"Напоминание","stateOrProvinceName":"Штат или область","Access Rights":"Права доступа","Mar":"Мар","No such user.":"Нет такого пользователя","a2_Tuesday":"Вт","Edit User Rights":"Редактировать права пользователей","March":"Март","Potentially anyone on the Internet will be able to access your address book \"%{0}\", even if they do not have an account on this system. Is this information suitable for the public Internet?":"Потенциально любой пользователь интернета смодет прочитать вашу адресную книгу \"%{0}\", даже если они не зарегистрированы в данной системе. Информация в этой адресной книге может быть выставлена в публичную сеть?","April":"Апрель","Show or hide this help":"Показать или скрыть подсказку","November":"Ноябрь","key_shift+up":"shift + ↑","October":"Октябрь","You cannot subscribe to a folder that you own!":"Вы не можете подписываться на собственную папку!","localityName":"Населенный пункт","Sorry, the user rights can not be configured for that object.":"Извините, для данного объекта невозможно настроить права доступа.","key_backspace":"⌫","Username":"Логин","Enter at least %{minimumSearchLength} characters":"Введите не менее %{minimumSearchLength} символов","January":"Январь","Forwarded":"Перенаправлено","Toggle range of items":"Сменить состояние нескольких элементов","Jun":"Июн","August":"Август","Add next item to selection":"Добавить следующий элемент к выделению","key_space":"space","passwordRecovery_SecretQuestion2":"Какой была ваша первая машина?","countryName":"Страна","hotkey_search":"s","PM":"PM","Aug":"Авг","delegate is a group":"Указанный адрес - адрес группы. Вы можете делегировать приглашение лишь отдельным людям.","Open Calendar":"Открыть календарь","Cancel":"Отмена","surname":"Фамилия","Disconnect":"Выход","You cannot unsubscribe from a folder that you own!":"Вы не можете прекратить подписку на собственную папку!","To Do":"К исполнению","Due Date":"Дата начала","Add User":"Добавить пользователя","Important":"Важно","No":"Нет","15 minutes":"15 минут","Warning":"Предупреждение","Any user with an account on this system will be able to access your calendar \"%{0}\". Are you certain you trust them all?":"Любой зарегистрированный в данной системе пользователь сможет просматривать ваш календарь \"%{0}\". Вы уверены что доверяете им всем?","Publish the Free/Busy information":"Публиковать информацию о занятом/свободном времени","Unable to rename that folder!":"Невозможно переименовать эту папку!","Close":"Закрыть","Keep Private":"Оставить в личном доступе","An error occured, please try again.":"Произошла ошибка, повторите попытку позже.","Jan":"Янв","Location":"Место","noJavascriptRetry":"Повторить попытку","Log Console (dev.)":"Консоль (для разработчиков)"};
+            var labels = {"Your account was locked due to too many failed attempts.":"Ваш аккаунт был заблокирован из-за слишком большого числа неудачных попыток.","Icelandic":"Íslenska","Galician":"Galego","Indonesian":"bahasa Indonesia","NorwegianNynorsk":"Norsk nynorsk","Bosnian":"Bosanski","Retry":"Повторить","Swedish":"Svenska","Missing search parameter":"Отсутствует параметр поиска","English":"English","The passwords do not match. Please try again.":"Пароли не совпадают. Пожалуйста, попробуйте еще раз.","Authentication Failed":"Проверка доступа завершилась неудачно","BrazilianPortuguese":"Português brasileiro","Close":"Закрыть","Domain":"Домен","AboutBox":"Разработанный компаниями Inverse и Alinto, SOGo представляет собой полнофункциональный сервер группового ПО, ориентированный на масштабируемость и простоту.<br/><br/>\nSOGo предоставляет мощный Web-интерфейс на базе AJAX и поддерживает множество собственных клиентов за счет использования стандартных протоколов, таких как CalDAV и CardDAV.<br/><br/>\nSOGo распространяется по лицензии <a href=\"http://gnu.org/licenses/gpl.html\">GNU GPL</a> версии 2 или более поздней, а отдельные части - по лицензии GNU LGPL версии 2. Это свободное программное обеспечение: вы можете свободно изменять и распространять его. ГАРАНТИИ НЕ ПРЕДОСТАВЛЯЮТСЯ, в пределах, разрешенных законодательством.<br/><br/>\nРазличные варианты поддержки см. на <a href=\"http://www.sogo.nu/en/support/community.html\">этой странице</a>.","Kazakh":"Қазақ","cookiesNotEnabled":"Вы не можете войти в систему, так как в Вашем браузере выключены cookies. Пожалуйста разрешите нашему сайту использовать cookies в настройках Вашего браузера.","Croatian":"Hrvatski","Verification Code":"Код верификации","Password must not be empty.":"Пароль не должен быть пустым.","Please wait...":"Пожалуйста, подождите...","minutes":"минут","Portuguese":"Português","Password about to expire":"Пароль истекает в ближайшее время","Download":"Скачать","About":"О системе","Enter the 6-digit verification code from your TOTP application.":"Введите 6-значный код подтверждения из приложения двухфакторной аутентификации.","Missing type parameter":"Отсутствует параметр типа","Wrong username or password.":"Неправильный логин или пароль.","Back":"Назад","Your account was locked due to an expired password.":"Ваш аккаунт был заблокирован в связи с истечение срока действия пароля.","Login failed due to unhandled error case:":"Войти не удалось из-за необработанного случая ошибки:","Password Grace Period":"Льготный период действия пароля","Language":"Язык","Change your Password":"Смените Ваш пароль","Arabic":"العربية","alternativeBrowserSafari":"Также можно использовать Safari.","Slovak":"Slovensky","Password recovery email in error":"Ошибка в электронной почте для восстановления пароля","Password lost":"Пароль утерян","hours":"часов","Japanese":"日本語","You have %{0} logins remaining before your account is locked. Please change your password in the preference dialog.":"У вас осталось % {0}входов до блокировки Вашей учетной записи. Пожалуйста, смените Ваш пароль в диалоговом окне предпочтения.","Answer":"Ответ","A link will be sent to %{0}":"Ссылка будет отправлена на %{0}","Username":"Логин","Unhandled HTTP error code: %{0}":"Необработанные ошибки HTTP-код:% {0}","SpanishArgentina":"Español (Argentina)","Invalid configuration for email password recovery":"Неправильная настройка электронной почты для восстановления пароля","Unhandled error response":"Необработанный ответ об ошибке","Unhandled policy error: %{0}":"Необработанные ошибки политики:% {0}","Password change failed - Password is too short":"Ошибка изменения пароля - Пароль слишком короткий","Finnish":"Suomi","Two-factor authentication has been disabled. Visit the Preferences module to restore two-factor authentication and reconfigure your TOTP application.":"Двухфакторная аутентификация отключена. Включите двухфакторную аутентификацию в параметрах и перенастройте программу TOTP.","browserNotCompatible":"Мы определили, что версия Вашего браузера не поддерживается на нашем сайте. Мы рекомендуем использовать Firefox. Нажмите на ссылку ниже, чтобы загрузить свежую версию браузера.","Serbian":"Српски","Password change failed - Permission denied":"Ошибка изменения пароля - Доступ запрещен","Welcome":"Добро пожаловать","alternativeBrowsers":"В качестве альтернативы можно использовать следующие программы:","Secondary e-mail":"Дополнительный адрес электронной почты","Welsh":"Cymraeg","Polish":"Polski","Confirmation":"Подтверждение","Password change is not supported.":"Смена пароля не поддерживается.","SerbianLatin":"Srpski","title":"SOGo","Czech":"Česky","Hungarian":"Magyar","ChineseChina":"简体中文","Your password has expired, please enter a new one below":"Ваш пароль истек, введите новый ниже","Password reset":"Пароль сброшен","Remember username":"Запомнить имя пользователя","Romanian":"Română","Invalid secret question answer":"Неправильный ответ на секретный вопрос","Password change failed - Insufficient password quality":"Ошибка изменения пароля - Пароль недостаточно сложный","Connect":"Соединение","Login failed due to unhandled error case":"Войти не удалось из-за необработанного случая ошибки","_loadedFrameworks":["MainUI"],"TurkishTurkey":"Türkçe (Türkiye)","German":"Deutsch","Danish":"Dansk (Danmark)","Slovenian":"Slovenščina","SpanishSpain":"Español (España)","Hi %{0},\nThere was a request to change your password!\n\nIf you did not make this request then please ignore this email.\n\nOtherwise, please click this link to change your password: %{1}":"Здравствуйте %{0},\nПоступил запрос на изменение вашего пароля!\n\nЕсли вы не делали этого запроса, то, пожалуйста, проигнорируйте это письмо.\n\nЕсли вы запрашивали изменение пароля - то перейдите по этой ссылке: %{1}","seconds":"секунд","Password change failed - Password is in history":"Ошибка изменения пароля - Пароль уже есть в истории","Password change failed":"Ошибка изменения пароля","French":"Français","Password":"Пароль","Montenegrin":"Crnogorski","Next":"Далее","New password":"Новый пароль","Your password is going to expire in %{0} %{1}.":"Ваш пароль будет годен до  % {0}% {1}.","Macedonian":"Македонски","Password change failed - Password is too young":"Ошибка изменения пароля - пароль слишком молод","Cancel":"Отменить","days":"дней","Dutch":"Nederlands","Ukrainian":"Українська","Bulgarian":"Български","Russian":"Русский","Authenticating":"Проверка доступа","ChineseTaiwan":"正體中文","choose":"Выбрать...","Hebrew":"עברית","You provided an invalid TOTP key.":"Введённый TOTP-код неверен.","A password reset link has been sent, please check your recovery e-mail mailbox and click on the link":"Вам была выслана ссылка на восстановление пароля, проверьте свой почтовый ящик и перейдите по ссылке","The password was changed successfully.":"Пароль был успешно изменен.","No password recovery method has been defined for this user":"Для пользователя не определен способ восстановления пароля","Basque":"Euskara","NorwegianBokmal":"Norsk bokmål","Please enter a new password below":"Пожалуйста, введите новый пароль ниже","Italian":"Italiano","Catalan":"Català","Latvian":"Latviešu","Lithuanian":"Lietuvių"};
+          </script>
+
+          
+
+          
+          <script type="text/javascript" src="/SOGo.woa/WebServerResources/js/vendor/lodash.min.js?lm=1740494937"></script>
+          <script type="text/javascript" src="/SOGo.woa/WebServerResources/js/vendor/angular.min.js?lm=1740494937"></script>
+          <script type="text/javascript" src="/SOGo.woa/WebServerResources/js/vendor/angular-animate.min.js?lm=1740494937"></script>
+          <script type="text/javascript" src="/SOGo.woa/WebServerResources/js/vendor/angular-sanitize.min.js?lm=1740494937"></script>
+          <script type="text/javascript" src="/SOGo.woa/WebServerResources/js/vendor/angular-aria.min.js?lm=1740494937"></script>
+          <script type="text/javascript" src="/SOGo.woa/WebServerResources/js/vendor/angular-cookies.min.js?lm=1740494937"></script>
+          <script type="text/javascript" src="/SOGo.woa/WebServerResources/js/vendor/angular-messages.min.js?lm=1740494937"></script>
+          <script type="text/javascript" src="/SOGo.woa/WebServerResources/js/vendor/angular-material.min.js?lm=1740494937"></script>
+          <script type="text/javascript" src="/SOGo.woa/WebServerResources/js/vendor/angular-ui-router.min.js?lm=1740494937"></script>
+
+          
+          
+          
+            <script type="text/javascript" src="/SOGo.woa/WebServerResources/js/Main.js?lm=1740494937"></script>
+          
+            <script type="text/javascript" src="/SOGo.woa/WebServerResources/js/Common.js?lm=1740494937"></script>
+          
+          
+            <script type="text/javascript" src="/SOGo.woa/WebServerResources/js/theme.js?lm=1742559566"></script>
+          
+            <script type="text/javascript" src="/SOGo.woa/WebServerResources/js/custom-sogo.js?lm=1742559566"></script>
+          
+        
+        
+
+      </body>
+    </html>
+  
+
+  
