@@ -1,0 +1,183 @@
+body {
+    background-color: rgb(22,22,22);
+    font-family: 'Ubuntu';
+    color: white;
+    transition: 1s;
+}
+
+@property --c1 {
+    syntax: '<color>';
+    initial-value: rgb(35, 35, 35);
+    inherits: false;
+  }
+  
+  @property --c2 {
+    syntax: '<color>';
+    initial-value: rgb(24, 24, 24);
+    inherits: false;
+  }
+
+  @keyframes shine {
+    0% {
+      left: -10%;
+    }
+    100% {
+      left: 110%
+    }
+}
+
+.container {
+    background: linear-gradient(var(--c1), var(--c2));
+    width: 40vh;
+    height: 60vh;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+
+    border-radius: 3vh;
+    border-color: rgb(88, 88, 88);
+    border-style: groove;
+    border-width: 0.2px;
+
+    transition: --c1 0.3s, --c2 0.3s, 0.3s;
+
+}
+
+.container:hover {
+    --c1: rgb(45, 45, 45);
+    --c2: rgb(34, 34, 34);
+    top: 49%;
+    box-shadow:0 0 20px rgb(88, 88, 88);
+}
+
+.avatar {
+    border-radius: 500px;
+
+    position: absolute;
+    
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+
+    max-width: 120px;
+    max-height: 120px;
+}
+
+.title {
+    position: absolute;
+
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+
+    font-size: 3vh;
+    font-weight: 400;
+}
+
+.subtitle {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+
+    font-size: 2vh;
+
+    text-align: center;
+    opacity: 0.5;
+}
+
+.location {
+    position: absolute;
+
+    top: 41%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+
+    font-size: 2.5vh;
+
+    text-align: center;
+    opacity: 0.5;
+
+    width: 40vh
+}
+
+.carrot {
+    position: absolute;
+
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+
+    width: 34vh;
+    height: 7vh;
+
+    border-radius: 1.3vh;
+
+    text-align: center;
+    text-anchor: middle;
+
+    transition: 0.35s;
+    background: linear-gradient(rgb(255, 163, 33), rgb(155, 107, 40));
+
+    border-color: rgb(255, 192, 116);
+    border-style: groove;
+    border-width: 0.2px;
+
+    color: white;
+
+    font-family: 'Ubuntu';
+    font-size: 3vh;
+
+    font-weight: 400;
+
+    box-shadow: 0px 3px 0px rgb(255, 192, 116);
+    cursor: pointer
+}
+
+
+.carrot:active {
+    width: 26vh;
+    height: 5vh;
+
+    font-size: 2vh;
+
+    box-shadow: 0px 0px 0px rgb(255, 192, 116);
+}
+
+.small-img {
+    margin-top: 2%
+}
+
+.github {
+    position: absolute;
+
+    top: 65%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    filter: brightness(12412);
+    transition: 0.3s;
+
+    cursor: pointer
+}
+
+
+.twitch {
+    position: absolute;
+
+    top: 65%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+    filter: brightness(2);
+
+    cursor: pointer
+}
