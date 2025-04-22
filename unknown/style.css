@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(33, 33, 33); 
+
+    font-family: "Special Gothic Expanded One", Arial
+}
+.label {
+    position: fixed;
+    left: 2%;
+    right: 0;
+    top: 25%;
+    bottom: 0;
+    margin: auto;
+    
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+
+    color: indianred;
+    text-align: center;
+
+    font-size: 23vh
+    
+  }
+
+  .sublabel {
+    position: fixed;
+    left: 2%;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+    margin: auto;
+    
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+
+    color: indianred;
+    text-align: center;
+ 
+    font-size: 9vh;
+    
+  }
