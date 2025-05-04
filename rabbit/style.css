@@ -1,0 +1,132 @@
+body {
+    background-color: rgb(33, 33, 33);
+    font-family: Arial;
+    color: white
+}
+
+header {
+    background-color: rgb(49, 49, 49);
+    height: 3rem;
+    align-items: center;
+    position: relative;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+    margin-top: -0.5em;
+    display: flex; 
+}
+
+p {
+    padding-left: 1em;
+}
+
+h1 {
+    font-size: 3em;
+    padding-left: 0.5em;
+}
+
+h3 {
+    padding-left: 1.4em;
+    font-weight: 300;
+    position: relative
+}
+
+.subtitle {
+    margin-top: -2rem;
+    padding-left: 1.5em;
+    font-weight: 300;
+    position: relative
+}
+
+
+button {
+    margin-left: 1.8em;
+    border-style: none;
+    background-color: rgb(0, 110, 255);
+    color: white;
+    border-radius: 9px;
+    width: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    height: 1.8rem;
+    transition: 0.2s
+}
+
+button:hover{
+    background-color: rgb(30, 128, 255);
+    box-shadow: 0px 0px 5px 0px rgb(0, 110, 255)
+}
+
+button:active {
+    background-color: rgb(0, 75, 173);
+}
+
+.segment {
+    margin-left: 0.6em;
+    border: none;
+    color: #fff;
+    background: rgb(78, 78, 78);
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+    outline: none;
+  }
+  
+.segment-active {
+    background: rgb(0, 110, 255);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 0.6em;
+}
+
+.segment:hover {
+    background: rgb(120, 120, 120);
+    box-shadow: 0px 0px 0px 
+}
+
+.segment:active {
+    background: rgb(65, 65, 65);
+}
+
+table {
+    width: 20rem;
+    border-collapse: collapse;
+    margin: 20px;
+    table-layout: fixed;
+}
+th, td {
+    border: 1px solid rgb(0, 110, 255);
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+    word-wrap: break-word;
+}
+th {
+    background-color: rgb(0, 110, 255);
+}
+td.name-column {
+    height: 200px;
+    text-align: left;
+    padding-left: 15px;
+}
+td.option-column {
+    text-align: center;
+}
+
+.warning {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 19rem;
+    margin-left: 1em;
+    border-radius: 1em;
+    border-width: 0.1em;
+    border-style:dashed;
+    border-color: rgb(255, 136, 0)
+}
+
+.warning-title {
+    color: rgb(255, 136, 0);
+    font-weight: 800;
+    font-size: 1.3em
+}

@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Rabbit - A new era of Telegram userbots</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="style.css">
+            <script src="./backend/Tabs.js"></script>
 
+        </head>
+
+        <body>
+            <header>
+                <p>Rabbit</p>
+                <button class="segment-active" id="tab_home">Home</button>
+                <button class="segment" id="tab_about">Getting Started</button>
+            </header>
+
+            <div id="tabFrame_home">
+                <h1>RABBIT</h1>
+                <h3 class="subtitle">A new era of Telegram userbots.</h3>
+    
+                <button onclick="switchTab('about')">Get Started</button>
+
+                <br>
+                <br>
+
+                <div style="display:flex; align-items: center; padding-left:1em">
+                    <img src="./assets/img/photo_2025-05-04_03-56-58.jpg" style="width: 30rem; height: auto; border-radius: 1em;">
+                    <img src="./assets/img/photo_2025-05-04_03-57-33.jpg" style="width: 30rem; height: auto; border-radius: 1em;">
+                </div>
+
+                <p style="opacity: 0.5; margin-left: 0.7em">screenshots</p>
+            </div>
+
+            <div id="tabFrame_about" hidden="true">
+                <h1>Installation</h1>
+                <h3>1. Download the latest release from <a href="https://github.com/realbxnnie/rabbit/releases">GitHub</a>.</h3>
+                <h3>2. Download latest Python release from <a href="https://python.org">python.org</a>.</h3>
+
+                <button class="segment-active" id="installation_windows" style="margin-left: 1.2rem">Windows</button>
+                <button class="segment" id="installation_unix">Linux & macOS</button>
+
+                <div id="installationF_unix"  hidden="true">
+                    <h3 style="margin-left: 1.2rem">3. Open Terminal & enter: <code>./start.sh</code></h3>
+                    <h3 style="margin-left: 1.2rem">4. Fill in the required fields</h3>
+                </div>
+
+
+                <div id="installationF_windows">
+                    <h3 style="margin-left: 1.2rem">3. Run <code>start.bat</code></h3>
+                    <h3 style="margin-left: 1.2rem">4. Fill in the required fields</h3>
+                </div>
+
+                <h3>Enjoy!</h3>
+
+                <h1>Configuration</h1>
+                <h3>To activate the configuration menu, enter: <code>.config</code></h3>
+                <h3>A menu like that should appear:</h3>
+                <img src="./assets/img/photo_2025-05-04_03-08-25.jpg" style="width: 30rem; height: auto;">
+                <h3>To toggle an option, enter: <code>.config {option} {off/on}</code></h3>
+                <h3>To change an option, enter: <code>.config {option} {value}</code></h3>
+                <h3>Up-to-date options list:</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NAME</th>
+                            <th>OPTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="name-column">
+                                Web Links<br>
+                                Reputation<br>
+                                Prefix<br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                            </td>
+                            <td class="option-column">
+                                <code>links</code><br>
+                                <code>reputation</code><br>
+                                <code>prefix</code><br>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <h1>Running Python code</h1>
+                <div class="warning">
+                    <p class="warning-title">WARNING</p>
+                    <div style="height: 1px; background-color: rgb(255, 136, 0); margin-top: -0.4rem"></div>
+                    <p>Keep in mind that the code runs from your host-machine.</p>
+                </div>
+
+                <p>To greet the world, type: <code>.py print("Hello World!")</code></p>
+                <p>The command only works with one-line code (a.k.a lambda)</p>
+            </div>
+            
+        </body>
+    </html>
